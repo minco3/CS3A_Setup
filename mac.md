@@ -1,40 +1,31 @@
 # Mac Instructions</br>
 
-- ### [Installing `git`](#mac_installing_git)</br>
+- ### [Installing `Xcode`](#mac_installing_Xcode)</br>
 - ### [Installing `cmake`](#mac_installing_cmake)</br>
 
 ---
 
 </br>
 
-<a name="mac_installing_git"></a>
+<a name="mac_installing_Xcode"></a>
 
-## Installing git
+## Installing Xcode
 
 </br>
 
-### Install git
+You need to install **Xcode Command Line Tools** to use **clang** and **git**
 
-We use [homebrew](https://brew.sh/) to [install git](https://git-scm.com/download/mac).
+</br>
 
-```sh
-$ brew install git
+### Check clang installation
+
+To make sure clang is installed correctly
+
+```shell
+$ clang --version
 ```
 
-If you see "brew: command not found", then you need to install brew.
-
-```sh
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# The following two lines for Apple M1 Processor
-
-# you can find the following command in terminal
-$ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/YOUR_DEVICE_NAME/.zprofile
-
-$ eval $(/opt/homebrew/bin/brew shellenv)
-```
-
-You need to install **Xcode** from App Store before you use other IDE.
+<img src="images/mac/a-00-clang_version.png" alt="git version" width="1000"/>
 
 </br>
 
@@ -42,11 +33,11 @@ You need to install **Xcode** from App Store before you use other IDE.
 
 To make sure git is installed correctly
 
-```sh 
+```console
 $ git --version
 ```
 
-<img src="images/mac/a-00-git_version.png" alt="git version" width="1000"/>
+<img src="images/mac/a-01-git_version.png" alt="git version" width="1000"/>
 
 </br>
 
@@ -54,9 +45,9 @@ $ git --version
 
 Login git with username and email address:
 
-```sh
-$ git config --global user.name "stephengineer"
-$ git config --global user.email "swang03@pasadena.edu"
+```console
+$ git config --global user.name <"YOUR NAME">
+$ git config --global user.email <"YOUR EMAIL">
 ```
 
 ---
@@ -73,8 +64,14 @@ $ git config --global user.email "swang03@pasadena.edu"
 
 We use homebrew to install [cmake](https://cmake.org/):
 
-```sh
+```console
 $ brew install cmake
+```
+
+If you see "brew: command not found", then you need to install brew.
+
+```console
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 </br>
@@ -83,15 +80,15 @@ $ brew install cmake
 
 Let's check to see if `cmake` is installed successfully:
 
-```sh
+```console
 $ cmake --version
 ```
 
-<img src="images/mac/a-01-cmake_version.png" alt="cmake version" width="1000"/>
+<img src="images/mac/a-02-cmake_version.png" alt="cmake version" width="1000"/>
 
 </br>
 
-If you do not get a response similar to this, then you do not have `cmake` on your system and you have to install it.
+If you do not get a response similar to this, then you do not have `cmake` on your system.
 
 ---
 
